@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event
+        </title>
+        <script language = "javascript" type = "text/javascript" src="./event.js"> </script>
+        <link rel="stylesheet" type="text/css" href="./event.css">
+        <p>I am using <em>em</em> tag!!</p>
+    </head>
+    <body>
+        <h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1>
+        <a href="#" onclick="alert('going back to top !!!!')">Alert & Top </a><br>
+        <a href="JavaScript:void(0)" onclick="alert('going back to top !!!!')">Alert & Stay </a><br>
+        <a href="JavaScript:void(0)" onclick="popup('Hello calling a function in a separate function file')">calling a function from a function file</a><br>
+        <a href="JavaScript:void(0)" onclick="popup('calling same funtion with other message')">calling same funtion with other message</a><br>
+        <a href="JavaScript:void(0)" onclick="popup1('function calling in a same file')">function calling in a same file</a><br>
+        <input type="button" value="Calling function" onClick="popup('Hello world! calling function from other file');"><br>
+        <img src="../html/picture/starsolid.gif" onClick="popup('calling same funtion with other message')"><br>
+        <h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1><br>
+        <p onMouseover="expand();">Slow Loris: Mouse over for more info</p><br>
+        Email:<br>
+        <input type="text" size="30" onFocus="this.style.backgroundColor='yellow';" onBlur="this.style.backgroundColor='white';">    
+        <form onSubmit="checkAddress('email');">
+            Email:
+            <input type="text" id="email">
+            <input type="submit" value="Submit">
+        </form>
+        <form>
+            ZIP:<br>
+            <input type="text" id="zip" onBlur="fillCity();"><br>
+            City:<br>
+            <input type="text" id="city">
+        </form>
+        <form onSubmit="return checkForSelection('states');">
+            <select id="states">
+            <option value="" selected="selected">
+            SELECT A STATE</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            </select>&nbsp;&nbsp;
+            <input type="submit" value="Submit Form">
+        </form>
+        <form onSubmit="return validateRadios();">
+            <input type="radio" name="r1" value="cat"> Cat<br>
+            <input type="radio" name="r1" value="bat"> Bat<br>
+            <input type="radio" name="r1" value="hat"> Hat<br>
+            <input type="submit" value="Submit Form">
+        </form>
+
+        <img src="../html/picture/Balloons.jpg" onMouseover="src='../html/picture/Balloons1.jpg'" onMouseout="src='../html/picture/Balloons.jpg'">
+        <p id="slowLoris">
+            Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+            <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+        </p>
+        <img src="../html/picture/blobfish.jpeg" id="ugly" onClick="makeInvisible();"><br>
+        <script>
+            function popup1(message){
+            alert(message);
+            }
+        </script>
+        <img src="../html/picture/Balloons.jpg" id="before" onMouseover="swapPic(id,'../html/picture/Balloons1.jpg');">
+    </body>
+</html>

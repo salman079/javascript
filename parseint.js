@@ -1,0 +1,18 @@
+var age = prompt("what is your age 5 yrs ago", 20);
+console.log("entered age " + age);
+age1 = age +5;
+alert ("before parsing " + age1);
+console.log("before parsing " + age1);
+var age2 = parseInt(age) + 5;
+alert ("after parsing Int " + age2);
+console.log("after parsing Int " + age2);
+var age3 = parseFloat(age) + 5;
+alert ("after parsing Float " + age3);
+console.log("after parsing Float " + age3);
+var age4 = Number(age) + 5;
+alert ("after parsing usign Number " + age4);
+console.log("after parsing using Number " + age4);
+var age5=age4.toString();
+var total = 6.3435435;
+var prettyTotal = total.toFixed(2);
+console.log("after rounding "+total+" to 2 places of decimal: " + prettyTotal);

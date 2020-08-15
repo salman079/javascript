@@ -1,0 +1,13 @@
+var cleanestCities = ["jeddah", "karachi","santa fe", "tucson", "great falls", "honolulu","muscat"];
+var firstChar = cleanestCities[0].slice(0, 1);
+var otherChars = cleanestCities[0].slice(1);
+firstChar = firstChar.toUpperCase();
+otherChars = otherChars.toLowerCase();
+var cappedCity = firstChar + otherChars;
+console.log("first chr of city " + cleanestCities[0] + " " + firstChar);
+console.log("other chrs of 2nd city " + cleanestCities[1] + " " + otherChars);
+console.log(cappedCity);
+var firstChar2 = cleanestCities[2].charAt(0);
+var lastChar2 = cleanestCities[2].charAt(cleanestCities[2].length-1);
+console.log("first chr of 2nd city using charAt " + cleanestCities[2] + " " + "is " + firstChar2);
+console.log("last chr of 2nd city using charAt " + cleanestCities[2] + " " + "is " + lastChar2);

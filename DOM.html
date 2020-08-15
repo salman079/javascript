@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+        </head>
+    <body>
+        <div id="cal">
+            <p>Southern Cal is sunny.</p>
+            <p>Northern Cal is rainy.</p>
+            <p>Eastern Cal is desert.</p>
+        </div>
+        <div id="ny">
+            <p>Urban <em>NY</em> is crowded.</p>
+            <p>Rural NY is sparse.</p>
+        </div>
+        <div>
+            <ol id="o_list">
+                <li>Sunday</li>
+                <li>Monday</li>
+                <li>Tuesday</li>
+                <li>Wednesday</li>
+            </ol>
+        </div>
+        <ul id="u_list">
+            <li>Jan</li>
+            <li>Feb</li>
+            <li>Mar</li>
+            <li>Apr</li>
+            <li>May</li>
+            <li>Jun</li>
+            <li>Jul</li>
+        </ul>
+        <form>
+            Old month:
+            <input type="text" id="month"><br>
+            New month:
+            <input type="text" id="city" onBlur="monthupdate('month','city');">
+        </form>
+    </body>
+    <script language = "javascript" type = "text/javascript" src="./DOM_Counting elements.js"> </script>    
+    <script language = "javascript" type = "text/javascript" src="./DOM_finding_children.js"> </script>
+    <script language = "javascript" type = "text/javascript" src="./DOM_Nodes.js"> </script>
+</html>
