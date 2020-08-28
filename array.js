@@ -17,9 +17,27 @@ pets[4] = "fish";
 pets[5] = "gerbil";
 pets[6] = "snake";
 console.log(pets);
-alert(pets);
-alert(names);
+console.log(names);
 pets.pop();
 console.log(pets);
 pets.push("fish","cow");
 console.log(pets);
+console.log("to check Push command on Array")
+var aa = [];
+aa.push("Farayha");
+console.log(aa);
+aa.push("Ahmed");
+console.log(aa);
+aa.push("Rafaya");
+console.log(aa);
+console.log("to check Unshift command on Array")
+aa.unshift("Saima");
+console.log(aa);
+aa.unshift("Faizan");
+console.log(aa);
+console.log("to check Pop command on Array")
+aa.pop();
+console.log(aa);
+console.log("to check Shift command on Array")
+aa.shift();
+console.log(aa);
