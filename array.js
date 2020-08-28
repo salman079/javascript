@@ -41,3 +41,26 @@ console.log(aa);
 console.log("to check Shift command on Array")
 aa.shift();
 console.log(aa);
+console.log("to check Splice function on Array")
+aa.splice(1,0,"Aman"); // splice(index where to add, how many values to replace, value to add)
+console.log(aa);
+aa.splice(3,0,"Usman", "Marium");
+console.log(aa);
+aa.splice(3,2,"Saad'o Bhaia");
+console.log(aa);
+aa.splice(3,0,"Usman", "Marium");
+console.log(aa);
+console.log("to check Slice function on Array")
+var ab = aa.slice(3,6); // splice(index where to add, how many values to replace, value to add)
+console.log(ab);
+console.log(aa);
+console.log("More function of Array")
+// aa.filter()
+// aa.find()
+// aa.findIndex()
+// aa.indexOf()
+// aa.lastIndexOf()
+// aa.map()
+// aa.reverse()
+// aa.sort()
+// aa.fill()
