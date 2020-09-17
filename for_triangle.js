@@ -7,7 +7,7 @@ for (var i = 0; i < n; i++) {
     }
     c = b + a
     console.log(c);
+    document.write(c + " \n");
     a += "**";
     b = " ";
-
 }
