@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.clear();
+        console.log("FIRST LINE");
+function breakfast(bf, bfstatus){
+    console.log(`01 abc function for Breakfast and we are eating ${bf}`);
+    let jawab = "yes";
+    bfstatus(jawab);
+}
+function lunch(menu, lunchstatus){
+    console.log(`Now we are serving lunch and the menu is ${menu}`);
+    lunchstatus("Mazedar Biryani Tayar hai!!!")
+}
+const dinner =(menu, dinnerstatus)=>{
+    
+console.log(`uff now we are eating delious ${menu} in dinner`);
+dinnerstatus("wo tou khatam bhee ho gia");
+    }
+    function bfcallback(response){
+        console.log(`Is breakfast ready? ${response}`);
+        lunch("Biryani",lunchcallback)
+    }
+    function lunchcallback(response){
+console.log(`is lunch ready? ${response}`);
+dinner("Daal", dinnercallback);
+    }
+const dinnercallback=(response)=>{
+  console.log(`is dinner ready? ${response}`);
+    }
+breakfast("Eggs", bfcallback);
+    </script>
+</body>
+</html> 
