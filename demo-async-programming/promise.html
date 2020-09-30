@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const sucess=()=>{console.log("Sucess")};
+const failure=()=>{console.log("Failure")};
+const promise1 =(input,fail,pass)=>{
+        input === false ? pass():fail();
+    }
+promise1(false,failure, sucess)
+//////////////////////////////
+const anyfunction =()=>{
+    return Math.floor(Math.random()*10)%2===0?true:false;
+}//                    (resolve,reject)
+const result=new Promise((win,lose)=>{
+    setTimeout(()=>{anyfunction()?win():lose()},500);
+});
+result.then(sucess).catch(failure);
+console.log("Hello Promise world!!!!!!!!")
+////////////////////////////////////
+const promise=new Promise((resolve,reject)=>{
+    setTimeout(function(){
+        console.log("new Promise")
+        reject()
+    },1000);
+});
+promise.then(function(){
+    console.log("promise resolved")
+        return 2       
+})
+.then (function(val){
+    console.log(val)
+    return val+2
+} )
+.then ((function(val){console.log(val)}))
+.catch(function(error){console.log("error")})
+////////////////////////////////////////////
+    </script>
+</body>
+</html>
