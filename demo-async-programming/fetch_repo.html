@@ -17,7 +17,7 @@
             console.log(repo, "Salman Repo")
             const Repojson = await repo.json()
             console.log(Repojson, "JSON-Salman Repo-map")
-            Repolist = Repojson.map(function (newValue, p) {
+            Repojson.map(function (newValue, p) {
                 return document.write(`<li> ${newValue.name} <===> ${newValue.created_at} <===> ${newValue.pushed_at}</li>`)
                 // return document.getElementById("repo_dis").innerHTML = newValue.name
             });
