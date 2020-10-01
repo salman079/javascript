@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li id="repo_dis"></li>
+    </ol>
+    <script>
+        async function getRepo() {
+            const repo = await fetch("https://api.github.com/users/salman079/repos")
+            console.log(repo, "Salman Repo")
+            const Repojson = await repo.json()
+            console.log(Repojson, "JSON-Salman Repo-map")
+            Repolist = Repojson.map(function (newValue, p) {
+                return document.write(`<li> ${newValue.name} <===> ${newValue.created_at} <===> ${newValue.pushed_at}</li>`)
+                // return document.getElementById("repo_dis").innerHTML = newValue.name
+            });
+            // document.getElementById("repo_dis").innerHTML = Repolist
+        }
+        getRepo();
+    </script>
+</body>
+
+</html>
