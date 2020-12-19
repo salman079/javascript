@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>async_try_catch</title>
 </head>
+
 <body>
     <script>
-function apifetch(){
-let promise = new Promise(function(resolve, reject){
-setTimeout(function(){
-    console.log("new Ascyn Try Catch promise")
-    // resolve("waooo Promise is accepted")
-    reject("ohhhh no its rejected")
-},3000);
-})
-return promise
-}
-async function _asyncJS(){
-    try{
-        let data = await apifetch()
-        console.log(data,"sucessful")
-    }
-    catch (error) {
-        console.log(error," shit happend")
-    }
-}
-_asyncJS()
+        function apifetch() {
+            let promise = new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    console.log("new Ascyn Try Catch promise")
+                    // resolve("waooo Promise is accepted")
+                    reject("ohhhh no its rejected")
+                }, 3000);
+            })
+            return promise
+        }
+        async function _asyncJS() {
+            try {
+                let data = await apifetch()
+                console.log(data, "sucessful")
+            }
+            catch (error) {
+                console.log(error, " shit happend")
+            }
+        }
+        _asyncJS()
     </script>
 </body>
+
 </html>
